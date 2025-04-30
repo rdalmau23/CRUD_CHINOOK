@@ -1,28 +1,42 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.sql.SQLException;
+import service.ArtistService;
 
+import java.util.Scanner;
+
+/**
+ * Classe principal amb el menú que executa el programa per gestionar la base de dades Chinook.
+ */
 public class App {
     public static void main(String[] args) {
-        String url = "jdbc:postgresql://localhost:5432/chinook_v2";   
-        String user = "postgres";
-        String password = "1234";
+        Scanner scanner = new Scanner(System.in);
+        ArtistService artistService = new ArtistService();
 
-        try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            Statement statement = conn.createStatement();
-            String sql = "SELECT * FROM artist";
-            ResultSet ResultSet = statement.executeQuery(sql);
+        int opcio;
+        do {
+            System.out.println("Menú principal");
+            System.out.println("1 - Consultar tots els artistes");
+            System.out.println("2 - Consultar artistes pel seu nom");
+            System.out.println("3 - Consultar 5 primers àlbums d’un artista");
+            System.out.println("4 - Afegir un artista");
+            System.out.println("5- Modificar un artista");
+            System.out.println("6 - Esborrar un artista");
+            System.out.println("7 - Sortir");
+            System.out.print("Selecciona una opció: ");
 
-            while (ResultSet.next()) {
-                int id = ResultSet.getInt("artist_id");
-                String name = ResultSet.getString("name");
-                System.out.println("ID: " + id + ", Nom: " + name);
+            opcio = Integer.parseInt(scanner.nextLine());
+
+            switch (opcio) {
+                case 1 -> artistService.obtenirTotsArtistes();
+                case 2 -> artistService.buscarArtista(scanner);
+                case 3 -> artistService.obtenirCincAlbums(scanner);
+                case 4 -> artistService.afegirArtista(scanner);
+                case 5 -> artistService.modificarArtista(scanner);
+                case 6 -> artistService.eliminarArtista(scanner);
+                case 0 -> System.out.println("Sortint...");
+                default -> System.out.println("Opció no vàlida");
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
+        } while (opcio != 0);
+
+        scanner.close();
     }
 }
-
