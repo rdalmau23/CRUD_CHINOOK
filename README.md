@@ -1,18 +1,22 @@
-## Getting Started
+# Gestor d'Artistes - Chinook DB
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Aquest projecte consisteix en el desenvolupament d'una aplicació Java per gestionar dades de la base de dades **Chinook**, focalitzant-se en la taula d'artistes i àlbums. El programa permet consultar, afegir, modificar i esborrar artistes, així com veure els primers àlbums d'un artista concret.
 
-## Folder Structure
+## 🎯 Objectius
 
-The workspace contains two folders by default, where:
+- Permetre la gestió bàsica de dades sobre artistes.
+- Utilitzar bones pràctiques de programació amb Java.
+- Fer consultes a una base de dades SQLite utilitzant JDBC.
+- Controlar errors i validar dades d'entrada de l'usuari.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🛠️ Funcionalitats
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### ✅ Menú Principal
+Opcions disponibles:
+1. Consultar tots els artistes  
+2. Consultar artistes pel seu nom  
+3. Consultar els 5 primers àlbums pel nom de l’artista  
+4. Afegir un artista  
+5. Modificar el nom d’un artista  
+6. Borrar un artista  
+7. Sortir del programa
