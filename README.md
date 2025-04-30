@@ -6,7 +6,7 @@ Aquest projecte consisteix en el desenvolupament d'una aplicació Java per gesti
 
 - Permetre la gestió bàsica de dades sobre artistes.
 - Utilitzar bones pràctiques de programació amb Java.
-- Fer consultes a una base de dades SQLite utilitzant JDBC.
+- Fer consultes a una base de dades PostgreSQL utilitzant JDBC.
 - Controlar errors i validar dades d'entrada de l'usuari.
 
 ## 🛠️ Funcionalitats
