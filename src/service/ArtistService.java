@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 /**
  * Classe que gestiona les operacions CRUD relacionades amb la taula artist.
+ * @author Rafel Dalmau
+ * @date 07-05-2025
  */
 public class ArtistService {
 

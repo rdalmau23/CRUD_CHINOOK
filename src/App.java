@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**
  * Classe principal amb el menú que executa el programa per gestionar la base de dades Chinook.
+ * @author Rafel Dalmau
+ * @date 07-05-2025
  */
 public class App {
     public static void main(String[] args) {

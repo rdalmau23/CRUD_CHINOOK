@@ -5,6 +5,8 @@ import java.sql.SQLException;
 
 /**
  * Classe per gestionar la connexió a la base de dades PostgreSQL.
+ * @author Rafel Dalmau
+ * @date 07-05-2025
  */
 public class DatabaseConnection {
     private static final String URL = "jdbc:postgresql://localhost:5432/chinook_v2";
